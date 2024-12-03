@@ -1,3 +1,4 @@
+import { link } from 'fs'
 import { CollectionConfig } from 'payload'
 
 export const Books: CollectionConfig = {
@@ -29,6 +30,14 @@ export const Books: CollectionConfig = {
       name: 'description',
       type: 'text',
       required: true,
+    },
+    {
+      name: 'summary',
+      type: 'richText',
+    },
+    {
+      name: 'link',
+      type: 'text',
     },
   ],
 }
