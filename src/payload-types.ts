@@ -101,10 +101,10 @@ export interface Media {
  */
 export interface Book {
   id: number;
-  image?: (number | null) | Media;
-  title?: string | null;
-  author?: string | null;
-  description?: string | null;
+  image: number | Media;
+  title: string;
+  author: string;
+  description: string;
   updatedAt: string;
   createdAt: string;
 }
