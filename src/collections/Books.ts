@@ -44,31 +44,6 @@ export const Books: CollectionConfig = {
       name: 'link',
       type: 'text',
     },
-    {
-      name: 'slug',
-      type: 'text',
-      required: true,
-    },
-    {
-      name: 'slug',
-      type: 'text',
-      required: true,
-    },
-    {
-      name: 'slug',
-      type: 'text',
-      required: true,
-    },
-    {
-      name: 'slug',
-      type: 'text',
-      required: true,
-    },
-    {
-      name: 'slug',
-      type: 'text',
-      required: true,
-    },
   ],
 }
 
