@@ -1,6 +1,8 @@
 import config from '@payload-config'
 import { getPayload } from 'payload'
 
+import Link from 'next/link'
+
 export default async function Home() {
   const payload = await getPayload({ config })
 
@@ -9,15 +11,16 @@ export default async function Home() {
   })
 
   return (
-    <div className="p-12">
+    <div className="p-12 text-zinc-900">
       <h2 className="mb-12 font-medium">Hello World</h2>
 
       <ul>
         {books.docs.map((book) => (
-          <li key={book.id}>
-            <h3>{book.title}</h3>
-            <p>{book.author}</p>
-          </li>
+          <Link href={`/${book.slug}`} key={book.id}>
+            <h3>
+              {book.title} <span className="text-zinc-400 ml-2">{book.author}</span>
+            </h3>
+          </Link>
         ))}
       </ul>
     </div>
