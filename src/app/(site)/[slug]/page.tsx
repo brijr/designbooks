@@ -2,6 +2,8 @@ import config from '@payload-config'
 import { getPayload } from 'payload'
 import { RichText } from '@payloadcms/richtext-lexical/react'
 
+import { Main } from '@/components/craft'
+
 export default async function Home({ params }: { params: { slug: string } }) {
   const payload = await getPayload({ config })
 
@@ -15,7 +17,7 @@ export default async function Home({ params }: { params: { slug: string } }) {
   })
 
   return (
-    <div className="p-12 text-zinc-900">
+    <Main className="p-12 text-zinc-900">
       <h2 className="mb-12 font-medium">{book.docs[0].title}</h2>
       <p>by {book.docs[0].author}</p>
       <p>{book.docs[0].description}</p>
@@ -27,6 +29,6 @@ export default async function Home({ params }: { params: { slug: string } }) {
           <RichText data={book.docs[0].summary} />
         </div>
       )}
-    </div>
+    </Main>
   )
 }
