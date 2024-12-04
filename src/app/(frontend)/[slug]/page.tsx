@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 export const revalidate = 600
 
-export default async function Home({ params }: { params: { slug: string } }) {
+export default async function Home({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const book = await queryBookBySlug({ slug })
   const cover: any = book?.image
