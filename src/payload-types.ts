@@ -121,7 +121,7 @@ export interface Book {
     [k: string]: unknown;
   } | null;
   link?: string | null;
-  slug?: string | null;
+  slug: string;
   updatedAt: string;
   createdAt: string;
 }
