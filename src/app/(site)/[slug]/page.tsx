@@ -1,5 +1,6 @@
 import config from '@payload-config'
 import { getPayload } from 'payload'
+import { RichText } from '@payloadcms/richtext-lexical/react'
 
 export default async function Home({ params }: { params: { slug: string } }) {
   const payload = await getPayload({ config })
@@ -22,11 +23,8 @@ export default async function Home({ params }: { params: { slug: string } }) {
       {book.docs[0].summary && (
         <div className="mt-12">
           <h3 className="mb-4 font-medium">Summary</h3>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: book.docs[0].summary,
-            }}
-          />
+
+          <RichText data={book.docs[0].summary} />
         </div>
       )}
     </div>
