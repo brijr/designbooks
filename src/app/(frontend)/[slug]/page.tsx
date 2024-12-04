@@ -10,6 +10,7 @@ export const revalidate = 600
 export default async function Home({ params }: { params: { slug: string } }) {
   const { slug } = await params
   const book = await queryBookBySlug({ slug })
+  const cover: any = book?.image
 
   if (!book) {
     return notFound()
@@ -29,10 +30,10 @@ export default async function Home({ params }: { params: { slug: string } }) {
 
       <Image
         className="w-36 h-fit"
-        src={book.image.url}
-        alt={book.image.alt}
-        width={book.image.width}
-        height={book.image.height}
+        src={cover.url}
+        alt={cover.alt}
+        width={cover.width}
+        height={cover.height}
       />
 
       {book.summary && (
