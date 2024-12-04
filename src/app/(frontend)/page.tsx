@@ -10,9 +10,13 @@ export default async function Home() {
 
       <ul>
         {books.map((book) => (
-          <Link href={`/${book.slug}`} key={book.id}>
+          <Link
+            href={`/${book.slug}`}
+            key={book.id}
+            className="block transition-all hover:pl-1 hover:-pr-1"
+          >
             <h3>
-              {book.title} <span className="text-zinc-400 ml-2">{book.author}</span>
+              {book.title} <span className="text-zinc-400 ml-1">{book.author}</span>
             </h3>
           </Link>
         ))}
