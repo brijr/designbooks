@@ -1,4 +1,4 @@
-import './globals.css'
+import '../globals.css'
 
 import { Manrope as Font } from 'next/font/google'
 

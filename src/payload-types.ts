@@ -121,6 +121,7 @@ export interface Book {
     [k: string]: unknown;
   } | null;
   link?: string | null;
+  slug?: string | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -229,6 +230,7 @@ export interface BooksSelect<T extends boolean = true> {
   description?: T;
   summary?: T;
   link?: T;
+  slug?: T;
   updatedAt?: T;
   createdAt?: T;
 }

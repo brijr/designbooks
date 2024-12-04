@@ -39,6 +39,10 @@ export const Books: CollectionConfig = {
       name: 'link',
       type: 'text',
     },
+    {
+      name: 'slug',
+      type: 'text',
+    },
   ],
 }
 
