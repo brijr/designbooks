@@ -21,10 +21,12 @@ export default async function Home({ params }: { params: { slug: string } }) {
     collection: 'media',
     where: {
       id: {
-        equals: book.docs[0].image,
+        equals: book.docs[0].image.id,
       },
     },
   })
+
+  console.log(image)
 
   return (
     <main className="p-12 text-zinc-900">
@@ -33,6 +35,7 @@ export default async function Home({ params }: { params: { slug: string } }) {
       <p>{book.docs[0].description}</p>
 
       {image.docs[0] && (
+        // @ts-ignore
         <Image src={image.docs[0].url} alt={image.docs[0].alt} width={500} height={500} />
       )}
 
