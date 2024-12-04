@@ -10,7 +10,7 @@ export default async function Home() {
 
   return (
     <div className="p-12">
-      <h2>Hello World</h2>
+      <h2 className="mb-12 font-medium">Hello World</h2>
 
       <ul>
         {books.docs.map((book) => (

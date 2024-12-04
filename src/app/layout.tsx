@@ -1,8 +1,15 @@
 import './globals.css'
 
+import { Inter as Font } from 'next/font/google'
+
+const font = Font({
+  subsets: ['latin'],
+  display: 'swap',
+})
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={font.className}>
       <body>{children}</body>
     </html>
   )
