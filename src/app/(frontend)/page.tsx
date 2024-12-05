@@ -25,12 +25,11 @@ export default async function Home() {
           <a className="link" href="https://wipdes.com">
             WIP
           </a>
-          .
         </p>
       </div>
 
       {books.length > 0 && (
-        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {books.map((book) => (
             <BookCard key={book.id} book={book} />
           ))}
@@ -58,7 +57,7 @@ const BookCard = ({ book }: { book: Book }) => {
         width={cover.width}
         height={cover.height}
         alt={cover.alt}
-        className="max-w-48 max-h-48 -mt-8"
+        className="max-w-36 max-h-36 sm:max-w-48 sm:max-h-48 -mt-8"
       />
       <div className="absolute bottom-4 text-sm left-4">
         <h3>{book.title}</h3>
