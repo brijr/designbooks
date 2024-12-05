@@ -1,4 +1,5 @@
 import { queryAllBooks } from '@/lib/data'
+import { Book } from '@/payload-types'
 
 import Link from 'next/link'
 
@@ -14,18 +15,24 @@ export default async function Home() {
       {books.length > 0 && (
         <ul>
           {books.map((book) => (
-            <Link
-              href={`/${book.slug}`}
-              key={book.id}
-              className="block transition-all hover:pl-1 hover:-pr-1"
-            >
-              <h3>
-                {book.title} <span className="text-zinc-400 ml-1">{book.author}</span>
-              </h3>
-            </Link>
+            <BookCard key={book.id} book={book} />
           ))}
         </ul>
       )}
     </main>
+  )
+}
+
+const BookCard = ({ book }: { book: Book }) => {
+  return (
+    <Link
+      href={`/${book.slug}`}
+      key={book.id}
+      className="block transition-all hover:pl-1 hover:-pr-1"
+    >
+      <h3>
+        {book.title} <span className="text-zinc-400 ml-1">{book.author}</span>
+      </h3>
+    </Link>
   )
 }
