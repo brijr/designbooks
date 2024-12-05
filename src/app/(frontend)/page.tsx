@@ -5,6 +5,8 @@ import { cn } from "@/lib/cn";
 import Image from "next/image";
 import Link from "next/link";
 
+export const revalidate = 600;
+
 export default async function Home() {
   const books = await queryAllBooks();
 
