@@ -13,11 +13,11 @@ export default async function Home() {
       </h2>
 
       {books.length > 0 && (
-        <ul>
+        <section>
           {books.map((book) => (
             <BookCard key={book.id} book={book} />
           ))}
-        </ul>
+        </section>
       )}
     </main>
   )
