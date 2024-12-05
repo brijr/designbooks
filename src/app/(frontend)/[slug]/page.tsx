@@ -1,27 +1,27 @@
-import { queryBookBySlug } from '@/lib/data'
-import { notFound } from 'next/navigation'
-import { RichText } from '@payloadcms/richtext-lexical/react'
+import { queryBookBySlug } from "@/lib/data";
+import { notFound } from "next/navigation";
+import { RichText } from "@payloadcms/richtext-lexical/react";
 
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
 
-export const revalidate = 600
+export const revalidate = 600;
 
-export default async function Home({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params
-  const book = await queryBookBySlug({ slug })
-  const cover: any = book?.image
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const book = await queryBookBySlug({ slug });
+  const cover: any = book?.image;
 
   if (!book) {
-    return notFound()
+    return notFound();
   }
 
   return (
-    <main className="p-12 text-zinc-900 grid gap-12">
-      <h2 className="font-medium">
-        <Link href="/">A Collection of Books on Design</Link>
-      </h2>
-
+    <article className="grid gap-12">
       <div>
         <h2 className="font-medium">{book.title}</h2>
         <p>by {book.author}</p>
@@ -41,6 +41,6 @@ export default async function Home({ params }: { params: Promise<{ slug: string 
           <RichText data={book.summary} />
         </div>
       )}
-    </main>
-  )
+    </article>
+  );
 }
