@@ -42,7 +42,7 @@ export default async function Home({
         )}
       >
         <Image
-          className="max-h-36 max-w-36 w-fit h-fit sm:max-w-64 sm:max-h-64"
+          className="max-h-36 max-w-36 w-fit h-fit sm:max-w-64 sm:max-h-64 lg:max-w-96 lg:max-h-96"
           src={cover.url}
           alt={cover.alt}
           width={cover.width}
