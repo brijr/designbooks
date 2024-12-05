@@ -51,8 +51,9 @@ const Header = () => {
 const Footer = () => {
   return (
     <footer className="text-xs grid gap-1 text-zinc-400">
-      <p>© Bridger Tower / 2025</p>
-      <p>https://designbooks.org</p>
+      <p>
+        designbooks.org / © <a href="https://github.com/brijr">brijr</a> / 2025
+      </p>
     </footer>
   );
 };
