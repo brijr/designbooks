@@ -28,8 +28,8 @@ export default function RootLayout({
         <main className="p-6 sm:p-12 grid gap-12 max-w-7xl">
           <h2 className="font-medium">
             <Link href="/" className="group">
-              Design Books{" "}
-              <span className="hidden group-hover:inline-block">*</span>
+              Design Books
+              <span className="hidden group-hover:inline-block"> *</span>
             </Link>
           </h2>
           {children}

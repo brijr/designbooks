@@ -24,10 +24,17 @@ export default async function Home({
     <article className="grid gap-12">
       <div>
         <h2 className="font-medium">{book.title}</h2>
-        <p>by {book.author}</p>
-        <p>{book.description}</p>
+        <p className="text-zinc-400">by {book.author}</p>
       </div>
 
+      <div className="grid gap-4 max-w-prose">
+        <p>{book.description}</p>
+        {book.link && (
+          <a className="link" target="_blank" href={book.link}>
+            Purchase this book ↗
+          </a>
+        )}
+      </div>
       <div
         className={cn(
           "p-8 relative flex flex-col items-center justify-center",

@@ -14,9 +14,16 @@ export default async function Home() {
         <h2 className="font-medium">
           A collection of books on the subject of design.
         </h2>
-        <p>
-          Created by <a href="https://bridger.to">Bridger Tower</a> at{" "}
-          <a href="https://wipdes.com">WIP</a>.
+        <p className="text-zinc-400">
+          Created by{" "}
+          <a className="link" href="https://bridger.to">
+            Bridger Tower
+          </a>{" "}
+          at{" "}
+          <a className="link" href="https://wipdes.com">
+            WIP
+          </a>
+          .
         </p>
       </div>
 
