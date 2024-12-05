@@ -24,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={font.className}>
-      <body className="min-h-screen text-zinc-950 bg-zinc-50">
+      <body className="min-h-screen text-zinc-950 bg-zinc-50 selection:bg-orange-200">
         <main className="p-6 sm:p-12 grid gap-12 max-w-7xl">
           <h2 className="font-medium">
             <Link href="/" className="group">

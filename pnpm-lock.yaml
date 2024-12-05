@@ -25,7 +25,7 @@ importers:
         specifier: latest
         version: 3.3.0(bc3brrnkjbvlpv6ufo2lr5z43u)
       '@payloadcms/storage-vercel-blob':
-        specifier: ^3.4.0
+        specifier: latest
         version: 3.4.0(@aws-sdk/client-s3@3.705.0)(@aws-sdk/lib-storage@3.705.0(@aws-sdk/client-s3@3.705.0))(payload@3.3.0(graphql@16.9.0)(monaco-editor@0.52.0)(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)(typescript@5.7.2))
       '@tailwindcss/typography':
         specifier: ^0.5.15
