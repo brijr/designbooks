@@ -31,7 +31,7 @@ export default async function Home({
         <p>{book.description}</p>
         {book.link && (
           <a className="link" target="_blank" href={book.link}>
-            Purchase this book ↗
+            Purchase this book
           </a>
         )}
       </div>
