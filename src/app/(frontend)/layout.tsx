@@ -26,15 +26,33 @@ export default function RootLayout({
     <html lang="en" className={font.className}>
       <body className="min-h-screen text-zinc-950 bg-zinc-50 selection:bg-orange-200">
         <main className="p-6 sm:p-12 grid gap-12 max-w-7xl">
-          <h2 className="font-medium">
-            <Link href="/" className="group">
-              Design Books
-              <span className="hidden group-hover:inline-block"> *</span>
-            </Link>
-          </h2>
+          <Header />
           {children}
+          <Footer />
         </main>
       </body>
     </html>
   );
 }
+
+const Header = () => {
+  return (
+    <nav className="sticky top-12 z-10">
+      <h2 className="font-medium">
+        <Link href="/" className="group">
+          Design Books
+          <span className="hidden group-hover:inline-block"> *</span>
+        </Link>
+      </h2>
+    </nav>
+  );
+};
+
+const Footer = () => {
+  return (
+    <footer className="text-xs grid gap-1 text-zinc-400">
+      <p>© Bridger Tower / 2025</p>
+      <p>https://designbooks.org</p>
+    </footer>
+  );
+};
