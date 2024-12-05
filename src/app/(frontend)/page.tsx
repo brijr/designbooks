@@ -30,7 +30,7 @@ export default async function Home() {
       </div>
 
       {books.length > 0 && (
-        <div className="grid sm:grid-cols-2 md:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
           {books.map((book) => (
             <BookCard key={book.id} book={book} />
           ))}
