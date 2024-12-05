@@ -49,7 +49,7 @@ const BookCard = ({ book }: { book: Book }) => {
         width={cover.width}
         height={cover.height}
         alt={cover.alt}
-        className="max-w-48 max-h-48"
+        className="max-w-48 max-h-48 -mt-8"
       />
       <div className="absolute bottom-4 text-sm left-4">
         <h3>{book.title}</h3>

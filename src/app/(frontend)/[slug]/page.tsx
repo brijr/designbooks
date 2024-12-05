@@ -1,9 +1,9 @@
 import { queryBookBySlug } from "@/lib/data";
 import { notFound } from "next/navigation";
 import { RichText } from "@payloadcms/richtext-lexical/react";
+import { cn } from "@/lib/cn";
 
 import Image from "next/image";
-import Link from "next/link";
 
 export const revalidate = 600;
 
@@ -28,13 +28,20 @@ export default async function Home({
         <p>{book.description}</p>
       </div>
 
-      <Image
-        className="w-36 h-fit"
-        src={cover.url}
-        alt={cover.alt}
-        width={cover.width}
-        height={cover.height}
-      />
+      <div
+        className={cn(
+          "p-8 relative flex flex-col items-center justify-center",
+          "aspect-video bg-zinc-100 rounded-xl",
+        )}
+      >
+        <Image
+          className="max-h-36 max-w-36 sm:max-w-64 sm:max-h-64"
+          src={cover.url}
+          alt={cover.alt}
+          width={cover.width}
+          height={cover.height}
+        />
+      </div>
 
       {book.summary && (
         <div className="prose">
