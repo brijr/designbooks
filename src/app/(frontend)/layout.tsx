@@ -37,7 +37,7 @@ export default function RootLayout({
 
 const Header = () => {
   return (
-    <nav className="sticky top-12 z-10">
+    <nav>
       <h2 className="font-medium">
         <Link href="/" className="group">
           Design Books
