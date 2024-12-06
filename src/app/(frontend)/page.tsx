@@ -17,7 +17,7 @@ export default async function Home() {
           A collection of books on the subject of design.
         </h2>
         <p className="text-zinc-400">
-          Created by{" "}
+          Curated by{" "}
           <a className="link" href="https://bridger.to">
             Bridger Tower
           </a>{" "}
