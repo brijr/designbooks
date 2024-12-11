@@ -11,10 +11,11 @@ export const revalidate = 600;
 export default async function Home({
   searchParams,
 }: {
-  searchParams: { search?: string };
+  searchParams: Promise<{ search?: string }>;
 }) {
-  const books = searchParams.search
-    ? await searchBooks({ query: searchParams.search })
+  const { search } = await searchParams;
+  const books = search
+    ? await searchBooks({ query: search })
     : await queryAllBooks();
 
   return (
@@ -36,7 +37,7 @@ export default async function Home({
       </div>
 
       <div className="grid grid-cols-[1fr_auto] items-center gap-4">
-        <SearchInput defaultValue={searchParams.search} />
+        <SearchInput defaultValue={search} />
         <p className="text-zinc-400">
           {books.length} {books.length === 1 ? "book" : "books"}
         </p>
