@@ -64,8 +64,8 @@ const BookCard = ({ book }: { book: Book }) => {
         href={`/${book.slug}`}
         className={cn(
           "p-8 relative flex flex-col items-center justify-center",
-          "aspect-square bg-zinc-200 rounded-xl",
-          "hover:bg-zinc-300 transition-colors duration-300"
+          "aspect-square rounded-xl bg-zinc-100 border border-zinc-200",
+          "hover:bg-zinc-200 transition-colors duration-300"
         )}
       >
         <Image
