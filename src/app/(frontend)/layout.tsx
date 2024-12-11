@@ -56,7 +56,7 @@ const Footer = () => {
         <a href="https://bridger.to" className="link">
           bridger
         </a>{" "}
-        /{" "}
+        @{" "}
         <a href="https://wipdes.com" className="link">
           wip
         </a>{" "}
