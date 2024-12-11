@@ -35,7 +35,7 @@ export default async function Home({
         </p>
       </div>
 
-      <div className="grid grid-cols-2 items-center gap-4">
+      <div className="grid grid-cols-[1fr_auto] items-center gap-4">
         <SearchInput defaultValue={searchParams.search} />
         <p className="text-zinc-400">
           {books.length} {books.length === 1 ? "book" : "books"}
