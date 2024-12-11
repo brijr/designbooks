@@ -39,7 +39,7 @@ export default async function Home({
         className={cn(
           "p-8 relative flex flex-col items-center justify-center",
           "aspect-video bg-zinc-100 border border-zinc-200 rounded-xl",
-          "hover:bg-zinc-300 transition-colors duration-300",
+          "hover:bg-zinc-200 transition-colors duration-300",
           "relative group"
         )}
         href={book.link || "#"}
