@@ -21,6 +21,7 @@
     "@payloadcms/richtext-lexical": "latest",
     "@payloadcms/storage-vercel-blob": "latest",
     "@tailwindcss/typography": "^0.5.15",
+    "@vercel/analytics": "^1.4.1",
     "clsx": "^2.1.1",
     "cross-env": "^7.0.3",
     "graphql": "^16.9.0",
