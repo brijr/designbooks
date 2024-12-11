@@ -25,6 +25,25 @@ export const queryAllBooks = cache(async () => {
 
   const result = await payload.find({
     collection: "books",
+    sort: ["title"],
+    pagination: false,
+  });
+
+  return result.docs || [];
+});
+
+export const searchBooks = cache(async ({ query }: { query: string }) => {
+  const payload = await getPayload({ config: configPromise });
+
+  const result = await payload.find({
+    collection: "books",
+    limit: 100,
+    pagination: false,
+    where: {
+      title: {
+        contains: query,
+      },
+    },
   });
 
   return result.docs || [];
