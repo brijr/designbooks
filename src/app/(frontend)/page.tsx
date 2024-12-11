@@ -49,7 +49,7 @@ const BookCard = ({ book }: { book: Book }) => {
       className={cn(
         "p-8 relative flex flex-col items-center justify-center",
         "aspect-square bg-zinc-100 rounded-xl",
-        "hover:bg-zinc-200 transition-colors duration-300",
+        "hover:bg-zinc-200 transition-colors duration-300"
       )}
     >
       <Image

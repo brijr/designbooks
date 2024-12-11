@@ -38,7 +38,7 @@ export default async function Home({
       <div
         className={cn(
           "p-8 relative flex flex-col items-center justify-center",
-          "aspect-video bg-zinc-100 rounded-xl",
+          "aspect-video bg-zinc-100 rounded-xl"
         )}
       >
         <Image
