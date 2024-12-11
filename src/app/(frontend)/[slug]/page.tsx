@@ -30,16 +30,18 @@ export default async function Home({
       <div className="grid gap-4 max-w-prose">
         <p>{book.description}</p>
         {book.link && (
-          <a className="link" target="_blank" href={book.link}>
-            Purchase this book
+          <a target="_blank" href={book.link}>
+            [ <span className="link">Purchase this book</span> ]
           </a>
         )}
       </div>
-      <div
+      <a
         className={cn(
           "p-8 relative flex flex-col items-center justify-center",
           "aspect-video bg-zinc-100 rounded-xl"
         )}
+        href={book.link || "#"}
+        target="_blank"
       >
         <Image
           className="max-h-36 max-w-36 w-auto h-auto sm:max-w-64 sm:max-h-64 lg:max-w-96 lg:max-h-96"
@@ -48,7 +50,7 @@ export default async function Home({
           width={cover.width}
           height={cover.height}
         />
-      </div>
+      </a>
 
       {book.summary && (
         <div className="prose">
