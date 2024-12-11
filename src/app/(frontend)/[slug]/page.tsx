@@ -38,7 +38,9 @@ export default async function Home({
       <a
         className={cn(
           "p-8 relative flex flex-col items-center justify-center",
-          "aspect-video bg-zinc-100 rounded-xl"
+          "aspect-video bg-zinc-200 rounded-xl",
+          "hover:bg-zinc-300 transition-colors duration-300",
+          "relative group"
         )}
         href={book.link || "#"}
         target="_blank"
@@ -50,6 +52,9 @@ export default async function Home({
           width={cover.width}
           height={cover.height}
         />
+        <p className="hidden group-hover:inline-block absolute bottom-4 right-4 text-sm left-4 w-3/4">
+          Purchase this Book
+        </p>
       </a>
 
       {book.summary && (
