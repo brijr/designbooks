@@ -37,7 +37,6 @@ export const searchBooks = cache(async ({ query }: { query: string }) => {
 
   const result = await payload.find({
     collection: "books",
-    limit: 100,
     pagination: false,
     where: {
       title: {

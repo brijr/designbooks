@@ -1,14 +1,21 @@
-import { queryAllBooks } from "@/lib/data";
+import { queryAllBooks, searchBooks } from "@/lib/data";
 import { Book } from "@/payload-types";
 import { cn } from "@/lib/cn";
+import { SearchInput } from "@/components/search-input";
 
 import Image from "next/image";
 import Link from "next/link";
 
 export const revalidate = 600;
 
-export default async function Home() {
-  const books = await queryAllBooks();
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: { search?: string };
+}) {
+  const books = searchParams.search
+    ? await searchBooks({ query: searchParams.search })
+    : await queryAllBooks();
 
   return (
     <section className="grid gap-12">
@@ -28,12 +35,16 @@ export default async function Home() {
         </p>
       </div>
 
-      {books.length > 0 && (
+      <SearchInput defaultValue={searchParams.search} />
+
+      {books.length > 0 ? (
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {books.map((book) => (
             <BookCard key={book.id} book={book} />
           ))}
         </div>
+      ) : (
+        <p className="text-zinc-400">No books found</p>
       )}
     </section>
   );

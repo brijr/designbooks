@@ -30,7 +30,8 @@
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
     "sharp": "0.32.6",
-    "tailwind-merge": "^2.5.5"
+    "tailwind-merge": "^2.5.5",
+    "use-debounce": "^10.0.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "4.0.0-beta.4",
