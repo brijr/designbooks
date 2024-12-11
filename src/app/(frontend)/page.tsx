@@ -64,8 +64,8 @@ const BookCard = ({ book }: { book: Book }) => {
         href={`/${book.slug}`}
         className={cn(
           "p-8 relative flex flex-col items-center justify-center",
-          "aspect-square bg-zinc-100 rounded-xl",
-          "hover:bg-zinc-200 transition-colors duration-300"
+          "aspect-square bg-zinc-200 rounded-xl",
+          "hover:bg-zinc-300 transition-colors duration-300"
         )}
       >
         <Image
@@ -75,8 +75,8 @@ const BookCard = ({ book }: { book: Book }) => {
           alt={cover.alt}
           className="max-w-36 w-auto h-auto max-h-36 sm:max-w-48 sm:max-h-48 -mt-8"
         />
-        <div className="absolute bottom-4 text-sm left-4">
-          <h3>{book.title}</h3>
+        <div className="absolute bottom-4 text-sm left-4 w-3/4">
+          <h3 className="truncate">{book.title}</h3>
           <h4 className="text-zinc-400">{book.author}</h4>
         </div>
       </Link>
